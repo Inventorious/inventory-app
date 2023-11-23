@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import apiURL from "../api";
 import { useNavigate } from "react-router";
 
-export const LoginPage = () => {
+export default function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [usernameError, setUsernameError] = useState("");
@@ -87,4 +87,4 @@ export const LoginPage = () => {
       </div>
     </>
   );
-};
+}
