@@ -13,9 +13,9 @@ export default createBrowserRouter([
     path: "/",
     element: <MainPage />,
     children: [
-      { index: true, element: <LoginPage /> },
-      { path: "home", element: <Homepage /> },
+      { index: true, element: <Homepage /> },
       { path: "add-item", element: <AddNewItem /> },
+      { path: "login", element: <LoginPage /> },
       { path: ":id", element: <Item /> },
     ],
   },

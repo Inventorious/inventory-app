@@ -33,7 +33,7 @@ export const LoginPage = () => {
           setPassword("");
           setPasswordError("");
           setUsernameError("");
-          nav("home");
+          nav("/");
         } else {
           setPasswordError("Incorrect Password");
         }

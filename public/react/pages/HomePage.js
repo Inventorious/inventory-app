@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import { ItemsList } from "../components/ItemsList";
 import { Page } from "../components/Details";
 import logo from "../../images/logo.jpeg";
+import { useNavigate } from "react-router-dom";
 
 // import and prepend the api url to any fetch calls
 import apiURL from "../api";
 import { LoginPage } from "../components/LoginPage";
 
 export const Homepage = () => {
+  const navigate = useNavigate();
   const [items, setItems] = useState([]);
   const [item, setItem] = useState({});
   const [activeItem, setActiveItem] = useState(false);
@@ -31,7 +33,7 @@ export const Homepage = () => {
   return (
     <main className="main">
       <>
-        <button onClick={() => setIsLoggedIn(false)}>Log Out</button>
+        <button onClick={() => navigate("login")}>Log Out</button>
         <h1>Items</h1>
         <ItemsList
           items={items}
