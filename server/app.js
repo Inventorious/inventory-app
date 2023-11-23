@@ -1,4 +1,3 @@
-
 // load environment variables from .env or elsewhere
 require("dotenv").config();
 const express = require("express");
@@ -16,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // serve up static files (e.g. html and css files)
-app.use("/", express.static(path.join(__dirname, "../dist")));
+app.use("/", express.static(path.resolve(__dirname, "../dist")));
 
 // api router
 app.use("/api", require("./routes"));
