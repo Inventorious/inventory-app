@@ -5,8 +5,7 @@ import { AddNewItem } from "./pages/AddItem";
 import Item from "./pages/Item";
 import MainPage from "./pages/MainPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Login } from "./pages/Login";
-import LoginPage from "./components/LoginPage";
+import LoginPage from "./components/LoginPage"
 
 export default createBrowserRouter([
   {
